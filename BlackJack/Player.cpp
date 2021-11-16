@@ -1,4 +1,5 @@
 #include "Player.h"
+
 bool Player::IsHitting() const { return (GetTotal() < 16); }
 
 void Player:: Win() const

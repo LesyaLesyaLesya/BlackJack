@@ -3,9 +3,12 @@
 
 #include <iostream>
 #include "Card.h"
+#include "Hand.h"
+#include "GenericPlayer.h"
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
     cout << "\t\tWelcome to Blackjack!\n\n";
 
     int numPlayers = 0;

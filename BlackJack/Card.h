@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 
+
+
 enum  Suits
 {
     SPADES, //пики

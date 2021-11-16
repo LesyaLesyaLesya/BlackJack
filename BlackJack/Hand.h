@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 
+
 class Hand
 {
     //Реализовать класс Hand, который представляет собой коллекцию карт

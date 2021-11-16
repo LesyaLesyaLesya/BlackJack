@@ -1,6 +1,7 @@
 #pragma once
 #include "Hand.h"
 
+
 class GenericPlayer : public Hand
 {
     /*Обобщенно описывает игрока. Не является полноценным игроком, а лишь содержит элементы,

@@ -1,6 +1,7 @@
 #include "Hand.h"
 #include <iostream>
 
+
 void Hand::Add(Card* addCard) { m_hand.push_back(addCard); }
 void Hand::Clear() { m_hand.clear(); }
 int  Hand::GetTotal() const

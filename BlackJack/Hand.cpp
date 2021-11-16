@@ -3,7 +3,7 @@
 
 void Hand::Add(Card* addCard) { m_hand.push_back(addCard); }
 void Hand::Clear() { m_hand.clear(); }
-int  Hand::GetTotal()
+int  Hand::GetTotal() const
 {
 
     int sum{ 0 };

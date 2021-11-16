@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 enum  Suits
 {
@@ -30,9 +31,11 @@ enum CardValue
 
 class Card
 {
+ 
     Suits       m_suit;
     CardValue   m_value;
     bool        m_position; //Указывает, как расположена карта — вверх лицом или рубашкой. Влияет на то, отображается она или нет
+
 public:
     Card(Suits suit, CardValue value, bool position);
     ~Card() {};
@@ -40,4 +43,10 @@ public:
     void Flip(); //Переворачивает карту. Может использоваться для того, чтобы перевернуть карту лицом вверх или вниз
     CardValue  GetValue() const; //Возвращает значение карты
 
+    //Перегрузка оператора вывода для класса Card. 
+    // Если карта перевернута рубашкой вверх (мы ее не видим), вывести ХХ,
+    //  если мы ее видим, вывести масть и номинал карты.
+    // Также для класса GenericPlayer написать перегрузку оператора вывода, который должен отображать имя 
+    //игрока и его карты, а также общую сумму очков его карт
+    friend std::ostream& operator<< (std::ostream& os, const Card& m_card);
 };

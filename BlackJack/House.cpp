@@ -1,5 +1,6 @@
 #include "House.h"
 
+
 void House::FlipFirstCard()
 {
 	if (!m_hand.empty())

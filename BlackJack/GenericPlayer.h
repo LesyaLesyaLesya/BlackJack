@@ -1,6 +1,7 @@
 #pragma once
 #include "Hand.h"
 
+
 class GenericPlayer : public Hand
 {
     /*Обобщенно описывает игрока. Не является полноценным игроком, а лишь содержит элементы,
@@ -10,7 +11,7 @@ protected:
     std::string name; //Имя игрока
 
 public:
-    GenericPlayer(std::string& m_name) : name(m_name) {};
+    GenericPlayer(const std::string& m_name) : name(m_name) {};
     virtual ~GenericPlayer() {};
 
     virtual bool IsHitting() const = 0; //Указывает, нужна ли игроку еще одна карта. Чистая виртуальная функция

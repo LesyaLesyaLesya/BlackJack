@@ -1,38 +1,45 @@
 ﻿// BlackJack.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
+/*5. Написать функцию main() к игре Блекджек.В этой функции вводятся имена игроков.
+Создается объект класса Game и запускается игровой процесс.Предусмотреть возможность повторной игры.*/
+
 
 #include <iostream>
 #include "Card.h"
+#include "Hand.h"
+#include "GenericPlayer.h"
+#include "Game.h"
 
 int main()
 {
-    cout << "\t\tWelcome to Blackjack!\n\n";
+    setlocale(LC_ALL, "Russian");
+    std::cout << "\t\tWelcome to Blackjack!\n\n";
 
     int numPlayers = 0;
     while (numPlayers < 1 || numPlayers > 7)
     {
-        cout << "How many players? (1 - 7): ";
-        cin >> numPlayers;
+        std::cout << "How many players? (1 - 7): ";
+        std::cin >> numPlayers;
     }
 
-    vector<string> names;
-    string name;
+    std::vector<std::string> names;
+    std::string name;
     for (int i = 0; i < numPlayers; ++i)
     {
-        cout << "Enter player name: ";
-        cin >> name;
+        std::cout << "Enter player name: ";
+        std::cin >> name;
         names.push_back(name);
     }
-    cout << endl;
+    std::cout << std::endl;
 
     // игровой цикл
     Game aGame(names);
     char again = 'y';
     while (again != 'n' && again != 'N')
     {
-        aGame.Play();
-        cout << "\nDo you want to play again? (Y/N): ";
-        cin >> again;
+        aGame.play();
+        std::cout << "\nDo you want to play again? (Y/N): ";
+        std::cin >> again;
     }
 
     return 0;

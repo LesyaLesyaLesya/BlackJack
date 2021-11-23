@@ -5,7 +5,7 @@ Card::Card(Suits suit, CardValue value, bool position) : m_suit(suit), m_value(v
 
 void Card::Flip() { this->m_position = !(this->m_position);}
 
-CardValue Card::GetValue() const { this->m_value; }
+CardValue Card::GetValue() const { return this->m_value; }
 
 std::ostream& operator<< (std::ostream& os, const Card& m_card)
 {

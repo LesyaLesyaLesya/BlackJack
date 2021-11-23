@@ -11,4 +11,5 @@ void GenericPlayer::Bust()
 std::ostream& operator<< (std::ostream& os, const GenericPlayer& m_GenericPlayer)
 {
     os << m_GenericPlayer.name; //доделаю...
+    return os;
 }

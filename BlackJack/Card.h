@@ -5,10 +5,10 @@
 
 enum  Suits
 {
-    SPADES, //пики
-    DIAMONDS, //бубны
-    HEARTS,//черви
-    CLUBS, //трефы
+    SPADES = 0, //пики
+    DIAMONDS = 1, //бубны
+    HEARTS = 2,//черви
+    CLUBS = 3, //трефы
 
 };
 
